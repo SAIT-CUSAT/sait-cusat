@@ -1,9 +1,10 @@
+import Recruiters from '@/data/recruiters'
 import React from 'react'
 
 function page() {
   return (
     <div>
-      ihhih
+<Recruiters/>
     </div>
   )
 }
