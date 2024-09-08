@@ -5,7 +5,7 @@ const Marquee = () => {
   return (
     <div className="overflow-hidden">
       {/* First Row: Left to Right */}
-      <div className="marquee-row flex space-x-4 py-3 animate-marquee">
+      <div className="marquee-row flex items-center space-x-4 py-3 animate-marquee">
         {recruiters.map((recruiter, index) => (
           <div key={index} className="recruiter-card w-80">
             <img
@@ -18,7 +18,7 @@ const Marquee = () => {
       </div>
 
       {/* Second Row: Right to Left */}
-      <div className="marquee-row-reverse flex space-x-4 py-4 animate-marquee-reverse">
+      <div className="marquee-row-reverse flex items-center space-x-4 py-4 animate-marquee-reverse">
         {recruiters.map((recruiter, index) => (
           <div key={index} className="recruiter-card w-80">
             <img
