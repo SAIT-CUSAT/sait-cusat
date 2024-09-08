@@ -1,11 +1,12 @@
-import React from 'react'
+// pages/index.js
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 
-function page() {
+export default function Home() {
   return (
     <div>
-      ihhih
+      <Navbar />
+      <Hero />
     </div>
-  )
+  );
 }
-
-export default page
