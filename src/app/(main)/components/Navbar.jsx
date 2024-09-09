@@ -1,44 +1,54 @@
-// components/Navbar.js
-export default function Navbar() {
-    return (
-      <nav className="flex justify-between items-center py-6 px-10 bg-white shadow-md">
-        <div className="text-xl font-bold">
-          {/* Replace with your logo or text */}
-          <img src="/resource/logo.png" alt="Logo" className="h-10" />
-        </div>
-        <ul className="flex space-x-4">
-          <li>
-            <a href="#" className="px-4 py-2 text-white bg-blue-900 rounded-full hover:bg-blue-800">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-4 py-2 text-white bg-blue-900 rounded-full hover:bg-blue-800">
+import React from "react";
+import CustomButton from "./button"; 
+
+const Navbar = () => {
+  return (
+    <nav className="flex justify-between items-center py-6 px-10 bg-white shadow-md">
+      <div className="text-xl font-bold">
+        <img src="/resource/logo.png" alt="Logo" className="h-16 w-16" />
+      </div>
+
+      <ul className="flex items-center gap-[50px]">
+        <li>
+          <a href="#">
+            <h6 className="text-[16px] !text-[#183b56] font-semibold">Home</h6>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h6 className="text-[16px] !text-[#183b56] font-semibold">
               Placements
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-4 py-2 text-white bg-blue-900 rounded-full hover:bg-blue-800">
-              Events
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-4 py-2 text-white bg-blue-900 rounded-full hover:bg-blue-800">
+            </h6>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h6 className="text-[16px] !text-[#183b56] font-semibold">Events</h6>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h6 className="text-[16px] !text-[#183b56] font-semibold">
               Executives
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-4 py-2 text-white bg-blue-900 rounded-full hover:bg-blue-800">
+            </h6>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h6 className="text-[16px] !text-[#183b56] font-semibold">
               Contact Us
-            </a>
-          </li>
-          <li>
-            <a href="#" className="px-4 py-2 text-blue-900 border-2 border-blue-900 rounded-full hover:bg-blue-100">
-              Notes
-            </a>
-          </li>
-        </ul>
-      </nav>
-    );
-  }
-  
+            </h6>
+          </a>
+        </li>
+        <li>
+          <CustomButton
+            text="Notes"
+            className="min-w-[166px] h-[48px] font-bold justify-center text-center cursor-pointer whitespace-nowrap rounded-[24px] px-[34px] text-[16px] border-[#001254] border-2 border-solid text-[#001254] hover:bg-blue-100"
+          />
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;

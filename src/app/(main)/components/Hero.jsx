@@ -1,43 +1,45 @@
 "use client";
 
 import React, { useState } from "react";
+import CustomButton from "./button"; 
 
 const Hero = () => {
   const [images, setImages] = useState([
-    "/path/to/image1.jpg",
-    "/path/to/image2.jpg",
-    "/path/to/image3.jpg",
-    "/path/to/image4.jpg",
+    "/resource/logo.png",
+    "/resource/logo.png",
+    "/resource/logo.png",
+    "/resource/logo.png",
   ]);
 
-  const tickMarkUrl = "https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000";
+  const tickMarkUrl =
+    "https://img.icons8.com/?size=100&id=pIPl8tqh3igN&format=png&color=000000";
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between p-10 bg-gray-50">
+    <section className="flex flex-col md:flex-row items-center justify-between pt-6 px-10 pb-10 bg-white">
       {/* Left section for heading and description */}
       <div className="flex-1 mb-6 md:mb-0">
-        {/* Updated h1 with your provided class */}
-        <h1 className="sm:text-[42px] md:text-[48px] leading-[68px] text-[56px] !font-['Hanken_Grotesk'] tracking-[0.20px] !text-[#001153] font-bold">
+        <h1 className="sm:text-[42px] md:text-[48px] leading-[68px] text-[56px] !font-['Hanken_Grotesk'] tracking-[0.20px] !text-[#001153] font-bold mt-0">
           Students Association <br />
           <span className="block mt-2">of Information Technology</span>
         </h1>
-        
-        {/* Updated p tag with the new font */}
+
         <p className="text-[20px] !text-[#001153] w-full !font-['Hanken_Grotesk'] font-normal leading-9">
           Official Student Association of the Division of Information Technology
           at Cochin University of Science and Technology.
         </p>
 
         {/* Event and Placement Sections */}
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col md:flex-row gap-10 mt-4">
           {/* Event Details */}
           <div className="flex flex-col items-start justify-center gap-3">
-            <button className="bg-blue-900 text-white py-2 px-6 rounded-full flex items-center space-x-2 mb-4 -mt-2">
-              <span>Events</span> <span className="text-lg">❤</span>
-            </button>
+            <CustomButton
+              text="Events"
+              icon="❤"
+              className="bg-blue-900 text-white"
+            />
             <img
               className="h-[24px]"
-              src={tickMarkUrl} // Green tick mark URL
+              src={tickMarkUrl}
               alt="Event Checkmark"
               loading="lazy"
             />
@@ -52,12 +54,14 @@ const Hero = () => {
 
           {/* Placement Details */}
           <div className="flex flex-col items-start justify-center gap-3">
-            <button className="border-2 border-blue-900 text-blue-900 py-2 px-6 rounded-full flex items-center space-x-2 mb-4 mt-5">
-              <span>Placements</span> <span className="text-lg">“”</span>
-            </button>
+            <CustomButton
+              text="Placements"
+              icon="“”"
+              className="border-2 border-blue-900 text-blue-900 mt-5"
+            />
             <img
               className="h-[24px]"
-              src={tickMarkUrl} // Green tick mark URL
+              src={tickMarkUrl}
               alt="Startup Checkmark"
               loading="lazy"
             />
