@@ -3,13 +3,17 @@ import HomePage from '../../pages/HomePage'
 import React from 'react'
 import Marquee from './components/marquee'
 
-function page() {
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+
+export default function Home() {
   return (
     <div>
+      <Navbar />
+      <Hero />
       <Marquee />
       <HomePage />
+  
     </div>
-  )
+  );
 }
-
-export default page
