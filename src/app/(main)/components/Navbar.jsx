@@ -1,14 +1,39 @@
-import React from "react";
-import CustomButton from "./button"; 
+"use client"
+import React, { useState } from "react";
+import CustomButton from "../../../components/button"; 
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="flex justify-between items-center py-6 px-10 bg-white shadow-md">
+      {/* Logo */}
       <div className="text-xl font-bold">
         <img src="/resource/logo.png" alt="Logo" className="h-16 w-16" />
       </div>
 
-      <ul className="flex items-center gap-[50px]">
+      {/* Hamburger icon for mobile screens */}
+      <div className="md:hidden">
+        <button onClick={() => setIsOpen(!isOpen)} className="focus:outline-none">
+          <svg
+            className="w-8 h-8 text-gray-800"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      {/* Menu Links (Hidden on smaller screens, visible on medium and up) */}
+      <ul className={`md:flex items-center gap-[50px] ${isOpen ? 'block' : 'hidden'} md:block`}>
         <li>
           <a href="#">
             <h6 className="text-[16px] !text-[#183b56] font-semibold">Home</h6>
