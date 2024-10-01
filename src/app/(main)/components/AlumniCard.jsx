@@ -6,7 +6,7 @@ export default function Alumnicard() {
   return (
     <div className="px-7">
                   <span className='text-[#1f6145] bg-[#36B37E] bg-opacity-25 px-2 py-1 rounded-full text-xs'>Alumni</span>
-                  <h3 className='text-2xl   !text-[#001153] font-bold mb-4 px-6 z-10 pt-3'>Featured Alumni</h3>
+                  <h3 className='text-2xl   !text-[#001153] font-bold mb-4 px-6 z-10 pt-3'>Reconnect, Reflect, and Inspire</h3>
     <div className="flex overflow-x-auto space-x-6 p-6">
       
       <div className="flex gap-6">
