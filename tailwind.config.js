@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+const withMT = require("@material-tailwind/react/utils/withMT");
+
+module.exports = withMT({
   darkMode: ["class"],
   content: [
     './components/**/*.{js,jsx}',
@@ -31,7 +34,7 @@ module.exports = {
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
     },
-    
   },
   plugins: [require("tailwindcss-animate")],
-};
+});
+  
