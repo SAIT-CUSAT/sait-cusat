@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import Statistics from './components/Statistics';
 import About from './components/About';
 import Footer from './components/Footer';
+import Alumnicard from './components/Alumnicard';
 // import Alumni from './components/Alumni';
 
 
@@ -17,7 +18,7 @@ export default function Home() {
       <Hero />
       <MarqueeDemo />
       <Events />
-      {/* <Alumni/> */}
+     <Alumnicard/>
       <Statistics/>
       <About/>
       <Footer/>
