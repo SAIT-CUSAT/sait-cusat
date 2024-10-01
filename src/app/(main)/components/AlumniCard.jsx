@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { alumni } from "../../../data/alumni"; // Adjusted path
+import { alumni } from "../../../data/alumni"; // Adjusted path as needed
 
 export default function Alumnicard() {
   return (
