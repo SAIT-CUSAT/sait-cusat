@@ -10,7 +10,7 @@ export default function Events() {
             <div className='grid grid-cols-4 gap-20 justify-center my-14'>
                 {events.map((card, index) => (
                     <Card
-                        key={index} // Add a unique key for each card
+                        key={index}
                         image={card.image}
                         title={card.title}
                         description={card.description}
